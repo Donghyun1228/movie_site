@@ -5,6 +5,7 @@ import Auth from "../hoc/auth";
 import LandingPage from "./views/LandingPage/LandingPage.js";
 import LoginPage from "./views/LoginPage/LoginPage.js";
 import RegisterPage from "./views/RegisterPage/RegisterPage.js";
+import MyPage from "./views/MyPage/MyPage";
 import NavBar from "./views/NavBar/NavBar";
 import Footer from "./views/Footer/Footer";
 import MovieDetail from "./views/MovieDetail/MovieDetail";
@@ -27,6 +28,7 @@ function App() {
             path="/movie/:movieId"
             component={Auth(MovieDetail, null)}
           />
+          <Route exact path="/mypage" component={Auth(MyPage, true)} />
         </Switch>
       </div>
       <Footer />
